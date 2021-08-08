@@ -62,7 +62,7 @@ git blame filename 列表形式查看指定文件历史修改记录
 ### Git分支  
 ```
 git branch 查看分支 (-r远程)
-git checkedout branchname 切换分支
+git checkeout branchname 切换分支
 git branch branchname 添加分支 (-b立即切换分支 -d删除分支)
 git merge branchname 合并指定分区到当前分区
 * 代码冲突只要进行筛选，重新提交即可
