@@ -10,13 +10,8 @@
 2. staged 已暂存
 3. committed 已提交
 ### 新建仓库  
-#### 本地  
 ```
-git init
-```
-#### 远程克隆  
-```
-git clone url
+git init/clone
 ```
 #### 查看当前文件状态  
 ```
@@ -53,11 +48,22 @@ git status 查看状态
 git add .
 git commit -m filename
 git push
+git reset 回退版本
+git rm 删除工作区文件
+git mv 移动或重命名工作区文件
+```
+### 日志
+```
+git log 查看历史提交记录
+* git log --online 简洁模式
+* git log --graph 拓扑图结构
+git blame filename 列表形式查看指定文件历史修改记录
 ```
 ### Git分支  
 ```
 git branch 查看分支 (-r远程)
-git branch branchname 添加分支 (-b立即切换分支)
+git checkedout branchname 切换分支
+git branch branchname 添加分支 (-b立即切换分支 -d删除分支)
 git merge branchname 合并指定分区到当前分区
 * 代码冲突只要进行筛选，重新提交即可
 ```
