@@ -1,0 +1,10 @@
+1.打开如下路径
+计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew
+
+2.右键class，点击修改
+
+3.将不需要的后缀删除，或者调整位置
+
+4.右键ShellNew，依次点击权限、高级，需要修改个人用户、 SYSTEM 和 Administrators 的权限为读取。第一步点击左下角的 禁止继承 ，选择将已继承的权限转换为此对象的权限
+
+5.接下来就可以双击 个人用户、SYSTEM 和 Administrators 来修改其权限为读取了，这三个全部做一次即可!
