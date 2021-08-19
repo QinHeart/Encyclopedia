@@ -120,7 +120,7 @@ else{
 每次拼接字符串，都会产生一个新的string对象，耗时、浪费空间
 
 ```
-SyringBuilder builder = new StringBuilder();
+StringBuilder builder = new StringBuilder();
 builder.append();
 builder.insert(int offest,String str);
 String finalString = builder.toString();
@@ -216,3 +216,12 @@ int[] copyArray = Arrays.copyOf(array,array.length);
 ---
 int[] copyArray= Arrays.copyOf(a)
 ```
+
+### 方法的重载
+
+允许方法名相同，参数个数或参数类型不同
+
+## 特殊注释标记
+
+1.   TODO（标记人，标记时间，预处理时间）
+2.   FIXME 错误，不能工作（标记人，标记时间，预计处理时间）
