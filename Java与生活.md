@@ -11,6 +11,7 @@ psvm | sout
 格式化：ctrl + alt +l
 补全：ctrl + alt + v
 注释：/**
+重命名：Shift + F6
 ```
 
 ## 一带而过
@@ -225,3 +226,75 @@ int[] copyArray= Arrays.copyOf(a)
 
 1.   TODO（标记人，标记时间，预处理时间）
 2.   FIXME 错误，不能工作（标记人，标记时间，预计处理时间）
+
+## OOP上半部分
+
+*   属性(共性，特性)：类当中的变量和方法
+*   成员变量：组成和构成了类，是类的重要组成部分
+*   实例：活生生的事务，是唯一的
+*   this --> 调用对象
+```
+public void sleep(){
+	System.out.println(this.name + "狗名字");
+}
+```
+
+### OOP封装
+
+给一个用户能设置，能获取，但不能瞎改的（set get）
+
+*   alt + insert --> 自动生成
+
+### jar导入
+
+```
+https://mvnrepository.com/
+```
+
+*   Lombok无法使用
+1. File/Settings/Build/Compiler/Annotation/Enable annotation process
+2. Run/Build Project
+
+### 构造方法
+
+```
+public Dogs(){
+}
+public Dogs(int age, String name,  String variety) {
+    this.age = age;
+    this.name = name;
+    this.variety = variety;
+}
+
+Dogs zhangDog = new Dogs(10,"Jerry","拉布拉多");
+        System.out.println("zhangDog = " + zhangDog);
+```
+
+### 垃圾回收
+
+```
+System.gc();
+```
+
+### Static
+
+*   静态变量 --> static
+
+*   静态方法 --> 
+
+```
+public static void food(){
+    System.out.println("所有的狗月底吃饭");
+}
+```
+
+```
+// 如何禁止修改 static 变量
+public static String plotvoid(){
+	return plot;
+}
+
+Dogs.plotvoid = "error";
+```
+
+### 单例设计模式
