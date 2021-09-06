@@ -3,6 +3,7 @@
 
 
 # Java
+封装/继承/多态
 
 ## 快捷键
 ```
@@ -14,6 +15,7 @@ psvm | sout
 重命名：Shift + F6
 ```
 
+# Java与生活
 ## 一带而过
 
 ### 初步认识
@@ -256,7 +258,7 @@ https://mvnrepository.com/
 2. Run/Build Project
 
 ### 构造方法
-
+* 快捷键：alt + insert
 ```
 public Dogs(){
 }
@@ -269,6 +271,7 @@ public Dogs(int age, String name,  String variety) {
 Dogs zhangDog = new Dogs(10,"Jerry","拉布拉多");
         System.out.println("zhangDog = " + zhangDog);
 ```
+
 
 ### 垃圾回收
 
@@ -298,3 +301,192 @@ Dogs.plotvoid = "error";
 ```
 
 ### 单例设计模式
+
+1. 创建一个 Cla 对象
+```
+private static Cla over = new Cla();
+```
+
+2.   让构造函数为 private , 防止类被格式化
+```
+private Cla(){
+	
+}
+```
+
+3.   获取唯一可用的对象
+```
+public static Cla getOver(){
+	return over;
+}
+```
+
+4.   调用唯一可用的对象
+```
+Cla wang = Cla.getOver();
+```
+
+## OOP下半部分
+### 继承
+
+```
+public class Dogs extends Animal{
+	
+}
+```
+
+### 方法重载
+
+```
+alt + insert --> overwrite method
+```
+
+*   是它自己拥有的特性，不是从父类继承的
+
+*   alt + insert 啃老啃到老
+
+### final
+
+*   最下层了，后面无人继承
+*   遗产没人继承，也无法继承
+
+```
+public final class Dog extends Animal
+```
+
+*   不能被子类重写，我的遗产你可以用，但不能为所欲为
+
+### 抽象类
+
+*   ```
+    public abstract class Animal {
+    	// abstract 抽象类
+    }
+    ```
+
+*   无法 new Animal
+*   概括具体的类
+
+### 抽象方法
+
+不能有实际的意义
+```
+public abstract void braking();
+```
+
+#### why?
+
+想象一下，动物叫声太多了
+
+*   抽象方法在抽象类中
+
+### 接口
+
+```
+// 接口
+public interface Human {
+    public void eat();
+    public void run();
+}
+```
+
+```
+// 实现接口 --> implements
+public class Chinese implements Human {
+    public static void main(String[] args) {
+        
+    }
+
+    @Override
+    public void eat() {
+        
+    }
+
+    @Override
+    public void run() {
+
+    }
+}
+```
+
+*   抽象类成是对具体事物的吃抽象
+*   接口是对动作、行为的抽象
+
+*   Animal抽象类是对具体事物的抽象
+*   Animal接口是对它的行为进行抽象
+
+### 多态
+
+```
+// 花木兰替父从军，向上转型
+public class Army {
+    public static void main(String[] args) {
+        HuaHu huaHu = new HuaMuLan();
+
+        System.out.println(huaHu);
+        
+        HuaMuLan.fighting();
+    }
+}
+
+// 打完仗了，要做回自己
+HuaMuLan huaMuLan = (HuaMuLan) huaHu;
+```
+
+
+
+### 匿名内部类
+
+```
+// 匿名内部类 -- 1
+Human human = new Human() {
+	@Override
+    public void eat() {
+    	System.out.println("中国人吃中国菜");
+	}
+
+	@Override
+        public void run() {
+        
+        }
+};
+human.eat();
+```
+
+```
+// 匿名内部类 -- 2
+new Human() {
+    @Override
+    public void eat() {
+        System.out.println("中国人吃中国菜");
+    }
+
+    @Override
+    public void run() {
+
+    }
+}.eat();
+```
+
+### Object
+
+所有类的父类
+
+# Java进阶
+
+
+
+
+# Java核心技术
+
+## 类
+
+*   localDate
+
+```
+LocalDate time = LocalDate.now();
+LocalDate birthday = LocalDate.of(1999,12,25);
+int year = time.getYear();
+int month = time.getMonthValue();
+int day = time.getDayOfMonth();
+```

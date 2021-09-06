@@ -1,0 +1,10 @@
+
+ping使用的是LCMP协议，不支持代理
+建议使用 curl -vv https://www.google.com
+
+
+export http_proxy=http://ip:port
+export https_proxy=http://ip:port
+
+export http_proxy=http://ip:7890
+export https_proxy=http://ip:port
