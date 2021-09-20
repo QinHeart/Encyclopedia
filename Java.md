@@ -28,8 +28,11 @@ Scanner in  = new Scanner(System.in);
 String name = in.nextLine();
 System.out.println(name);
 
-nextLine\nextInt\nextD
+nextLine\nextInt\nextDouble
 ```
 
 
 
+#### 变量
+
+Java是一种强类型语言，所有变量再使用之前必须定义或声明，必须有确定的数据类型
