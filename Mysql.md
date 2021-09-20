@@ -194,7 +194,7 @@ create table if not existst t_2
 
 
 
-## Code规范
+## 数据库设计思维
 
 1. 确保字段的原子性（每行不可再分）
 2. 不能扯淡
@@ -202,7 +202,7 @@ create table if not existst t_2
 
 
 
-## 详细
+## 单表查询
 
 ```
 select
@@ -230,6 +230,90 @@ select sum(chinese) from test;
 sum
 avg 平均值
 max/min
-c
+count
+
+like模糊查询
+select * from test where name like '张%' 姓张的所有人
+select * from test where name like '张_' 张后面一个字段
+
+select * from test order by age asc/desc;
+
+分组查询
+select avg(age) as '年龄',gender as '性别' from info group by gender;
+聚合函数，分组字段
+group by 谁，就是根据谁分组
+
+聚合 select group_concat(name),gender from student group
+
+having，对查询后的结果进行筛选
+select avg(age),gender from info broup by info having age>10;
+
+limit 限制范围
+select 8 from info limit 2,4 --> 从3开始，长度为4
+
+distinct 去重
+select distinct age from info;
+select count(distinct age) from info;
 ```
+
+
+
+## 多表查询
+
+### 联合查询
+
+```
+select name from test union  select age from info;
+```
+
+
+### 内连接
+
+```
+select name,score from student inner join score on student.id=score.id;
+student和score是两张表，student.id和score.stuids是两张表共同的部分
+筛选出两张表都存在的数据
+
+left join 左连接，以左边表为基准，无公共字段的为null
+right join
+```
+
+### 交叉连接
+
+```
+select * from t1 cross join t3;
+```
+
+### 自然连接
+
+```
+select * from t1 natural join t3;
+两边公共的字段名，自然有自然左连接和自然右连接
+无公共字段的自然连接返回笛卡儿积
+```
+
+### using
+
+```
+都是共同字段会返回null···
+select * from t1 inner join t3 using(id);
+```
+
+
+
+## 子查询
+
+```
+select * from student where id in (select stuid from score where score>90);
+```
+
+```
+select * from student where exists/not exists (select stuid from score where score>90);
+```
+
+
+
+到此为止，基础内容就算是结束了
+
+---
 
