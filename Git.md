@@ -3,6 +3,18 @@
 
 ## 额 其实GitHub客户端是真的方便
 
+```
+fatal: unable to access 'https://github.com/QinHeart/Blog.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+```
+
+这个问题可能与http的ssl认证有关，可以尝试解除认证
+
+```
+git config --global http.sslVerify "false"
+如果显示 not support,就再输入
+git config lfs.https://github.com/Harris-H/ICPC.git/info/lfs.locksverify false
+```
+
 
 
 ## 实用  

@@ -1,38 +1,113 @@
 # Java与生活
 
-## 一带而过
+---
+
+## 基本程序设计结构
+
+### 变量与常量
+
+变量一定要初始化
+
+> int age = 0;
+
+#### final
+
+final 表示这个变量只能被赋值一次，无法再修改（常量名使用权大写）
+
+> final double CM_PER_INCH  = 2.54;
+
+类常量（在一个类的多个方法中使用）
+
+> public static final double CM_PER_INCH = 2.54;
 
 
 
-```
-public class Test{
-    public static void main(String args[]){
-        System.out.println("Hello World!");
-    }
-}
-```
+### 数学函数
 
-Java又称字节码文件
-
-```
-javac Test.java;
-java Test;
-```
+> double x = 4; double y = Math.sqrt(x); 将y设置为x的平方根
+>
+> double y =  Math.pow(x,a); 将y设置为x的a次幂
+>
+> double x =  9.997; int nx = (int) Math.round(x);  四舍五入
 
 
 
-#### 输入输出
+### 数据类型转换
 
-```
-Scanner in  = new Scanner(System.in);
-String name = in.nextLine();
-System.out.println(name);
-
-nextLine\nextInt\nextDouble
-```
+> double x = 9.997; int nx = (int) x;
 
 
 
-#### 变量
+### 三元运算符
 
-Java是一种强类型语言，所有变量再使用之前必须定义或声明，必须有确定的数据类型
+> condition ? expression1 : expression2
+>
+> int x = 8; int y = 10; int z = x > y ? x : y ;
+
+
+
+### 字符串
+
+> Scanner in  =  new Scanner(System.in);
+>
+> int age = in.nextInt();
+
+除此之外还有 nextLine | nextDouble ```
+
+
+
+#### substring
+
+从较大的字符串中提取子串
+
+> String greeting = "Hello";
+>
+> String s = greeting.substring(0,3);
+
+
+
+#### 拼接
+
+> String one = "one"; String two = "two" + one;
+
+#### join
+
+> String all = String.join("/","S","M","A","B");
+
+#### equal
+
+> "Hello".equals(t)
+
+不区分大小写
+
+> "Hello".equalsIgnoreCase("hello")
+
+空串与null
+
+> str.length() != 0 && str != null ;
+
+#### 构建字符串
+
+> StringBuilder builder = new StringBuilder();
+>
+> builder.append("Hello");
+>
+> builder.insert(0,"stsrt");
+>
+> String completBuilder = builder.toString();
+
+#### 输入与输出
+
+> Scanner in = new Scanner(System.in);
+>
+> int age = in.nextInt(); 
+>
+> // next() | nextDouble | nextLine();
+
+### 格式化
+
+> %s 字符串
+>
+> %d 十进制
+>
+> %f 浮点数

@@ -317,3 +317,101 @@ select * from student where exists/not exists (select stuid from score where sco
 
 ---
 
+# 进阶
+
+## 视图
+
+命名视图最好在加上前缀，方便在终端上识别
+
+```
+create view vw_stu as select name,phone from student;
+```
+
+视图算法,子查询有问题时使用
+
+```
+algorithm=TEMPATABLE
+create algorithm=TEMPATABLE view vw_stu as select name,score from student inner join grade on student.id=grade.id
+```
+
+
+
+```
+show table status where comment='view' \G
+```
+
+
+
+## 事务
+
+```
+start transaction --> 开启事务
+commit --> 提交事务
+```
+
+只要 commit 就无法 rollback 
+
+### 回滚
+
+```
+rollback;
+savepoint point_name; --> 设置回滚点
+rollback to point_name; --> 回滚到之前位置
+```
+
+### ACID
+
+atomicity 原子性
+
+consitency 一致性
+
+isolation 隔离性
+
+durability 持久性
+
+## 索引
+
+```
+create index balabce_index on wallet(balabce); --> 普通索引
+create unique index balance_index on wallet(balance); --> 唯一索引
+drop index ind
+```
+
+
+
+语句结束 delimiter //
+
+还原 delimiter ;
+
+
+
+## 存储过程
+
+```
+create procedure proc()
+begin
+update wallet set money=money+100;
+end //
+```
+
+调用存储过程
+
+```
+call proc();
+```
+
+
+
+
+
+## Number
+
+抽奖
+
+select * from student order by rand() limit 3;
+
+
+
+## String
+
+大小写 selelct ucase/lcase('fuck')
