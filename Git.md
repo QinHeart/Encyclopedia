@@ -17,6 +17,14 @@ git config lfs.https://github.com/Harris-H/ICPC.git/info/lfs.locksverify false
 
 
 
+大部分的时候，关闭代理就可以正常的将本地代码push到代码仓库中
+
+如果正常的运行了关闭命令，但是依然无效，就可以考虑是不是TLS版本过低，被禁掉了，这个时候使用第二种方法，更新一下git凭证管理器 ，应该就OK了
+
+**[Git-Credential-Manager-for-Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0)**
+
+
+
 ## 实用  
 
 ### 流程  
