@@ -63,7 +63,7 @@ set character_set_client=gbk;
 ```
 增
 create database if not exists 'frank_school' charset=gbk;
-ceeate table if not exists teacher(
+create table if not exists teacher(
 id int auto_increment primary key comment '主键id'
 )engine=innodb;
 
@@ -181,7 +181,7 @@ alter table table_name drop index unique_name;
 ## 注释
 
 ```
-create table if bot exists t_3 #单行注释，可直接写
+create table if not exists t_3 #单行注释，可直接写
 create table if not exists t_1 -- 单行注释，输入符号后要加空g
 ```
 
@@ -249,7 +249,7 @@ having，对查询后的结果进行筛选
 select avg(age),gender from info broup by info having age>10;
 
 limit 限制范围
-select 8 from info limit 2,4 --> 从3开始，长度为4
+select * from info limit 2,4 --> 从3开始，长度为4
 
 distinct 去重
 select distinct age from info;
@@ -263,7 +263,7 @@ select count(distinct age) from info;
 ### 联合查询
 
 ```
-select name from test union  select age from info;
+select name from test union select age from info;
 ```
 
 
@@ -374,7 +374,7 @@ durability 持久性
 ```
 create index balabce_index on wallet(balabce); --> 普通索引
 create unique index balance_index on wallet(balance); --> 唯一索引
-drop index ind
+drop index index_name;
 ```
 
 
@@ -415,3 +415,49 @@ select * from student order by rand() limit 3;
 ## String
 
 大小写 selelct ucase/lcase('fuck')
+
+
+
+## 字段规范约束
+
+- 字段名必须是小写字母，不能以数字开头，不能出现复数
+
+- 不要因为大度浪费资源
+
+```
+is_vip unsigned tinyint 1
+```
+
+- 表示是与否一定要使用 unsigned tinyint 1
+
+- 索引名
+```
+pk_xxx primary key
+uk_xxx unique key
+idx_xxx index key
+```
+
+- 所有的小数一律使用 decimal ,不允许使用 float/double
+
+- 如果字符串很小，建议使用 char
+- 必须有三个字段
+```
+id unsigned bigint auto_increment
+creatime datatime 
+```
+
+
+
+## 索引规范
+
+join 两边属性要求相同
+
+## SQL开发约束
+
+is null
+
+不允许使用存储过程
+
+外键和级联不允许使用
+
+对数据操纵时先 select 看有无错误
