@@ -6,6 +6,7 @@
 psvm --> public static void
 sout --> System.out.println("");
 ctrl + alt + v --> 补全
+ctrl + alt + l --> 对齐
 ```
 
 
@@ -156,5 +157,115 @@ for (int i : arr_1) {
 	System.out.printf(i + " ");
 }
 System.out.println("binresult = " + binresult);
+```
+
+```
+int[] arr_1 = {34,78,12,3,55,7,14};
+int[] arr_2 =  {1,2,3,4,5,6};
+boolean equals = Arrays.equals(arr_1, arr_2);
+System.out.println("equals = " + equals); 
+```
+
+### 方法重载
+
+> 方法名相同，参数个数或参数类型不同
+
+
+
+## OOP上半部分
+
+对象 > 实例
+
+实例：现实生活中的一个东西，对抽象的东西进行描述
+
+​	是一个活生生的东西，是唯一的
+
+类当中的变量和方法都称为属性
+
+### 行为
+
+一个动作，一个函数
+
+### 封装
+
+> alt + insert
+
+```
+private age;
+public void setAge(int age){
+	this.age = age;
+}
+public int getAge(){
+	return age;
+}
+```
+
+### 构造
+
+- 初始化对象
+
+- 构造方法不要加类型 --> public Dogs(){```}
+
+- 如果自己定义了构造器，一定要加上无参gouzaoqi 
+
+```
+public Dogs(String name,int age,String variety){
+    this.name = name;
+    this.age = age;
+    this.variety = variety;
+}
+```
+
+### 垃圾回收
+
+会自动回收
+
+System.gc()
+
+### 静态变量/方法
+
+> static 好处在于我们可以直接用类名去调用，不需要对象
+
+```
+public static String plot = "NanG";
+// 静态方法
+public static void injection(){
+	System.out.println("系统升级啦");
+}
+// 为了防止用户修改静态变量，还需要进一步修改
+public static String getPlotInstance(){
+	return plot;
+}
+```
+
+单例设计模式
+
+```
+public class Earth {
+	// 创建 Earth 的一个对象
+	private static Earth earthInstance = new Earth();
+	
+	// 让构造函数为 private , 避免被实例化
+	private Earth(){}
+	
+	// 获取唯一可调用的对象
+	public static Earth getEarthInstance(){
+		return earthInstance;
+	}
+	// 输出信息
+	public void instance(){
+		System.out.println("单例设计模式");
+	}
+}
+
+
+public class runEarth {
+    public static void main(String[] args) {
+        // 获取唯一可调用的对象
+        Earth earthInstance = Earth.getEarthInstance();
+        // 显示消息
+        earthInstance.instance();
+    }
+}
 ```
 
