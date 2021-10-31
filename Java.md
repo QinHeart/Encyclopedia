@@ -7,6 +7,8 @@ psvm --> public static void
 sout --> System.out.println("");
 ctrl + alt + v --> 补全
 ctrl + alt + l --> 对齐
+alt + insert --> 插入类型
+ctrl + shift + u --> 全部转为大写
 ```
 
 
@@ -268,4 +270,134 @@ public class runEarth {
     }
 }
 ```
+
+
+
+
+
+### 继承
+
+```
+public class Hamsters extends Animal
+```
+
+### 方法重写
+
+目的在于让子类有属于自己的特点
+
+```
+@Override
+public void food() {
+    // super.food(); --> super 父类的东西
+    System.out.println("吃仓鼠粮");
+}
+```
+
+#### super
+
+啃老啃到彻底
+
+```
+super.food();
+```
+
+子类可以继承父类一些特性，但无法继承所有。如果一定要继承，可以使用 alt + insert construct
+
+```
+super(name,variety,age,food);
+```
+
+#### final
+
+最后一个，无法被继承
+
+```
+public final class Hamsters extends Animal
+```
+
+不想被子类继承的方法也可以用 final ，可以避免被子类使用
+
+final 修饰过的方法不能被子类继承，可以用，但不能为所欲为
+
+final 修饰过的变量不能再修改
+
+### 抽象与具体
+
+ 	Animal 本质来说是没有人用的，它是一个抽象的，抽取这些猫狗的共性，作为使用
+
+​	抽象的目的是为了概括这些具体的事物
+
+abstruct（抽象）
+
+- 抽象类
+
+```
+public abstract class Animal --> 不能再 new Animal
+```
+
+- 抽象方法，不添加任何修饰
+```
+public abstruct void barking();
+```
+
+一旦有抽象方法，这个类一定是抽象类
+
+### 接口
+
+interface 接口中所有的方法都是抽象的
+
+```
+public class Chinese implements Human{
+	@Override
+    public void eat() {
+
+    }
+}
+```
+
+类中的方法叫重写，接口中的方法叫实现
+
+- 抽象类是对具体的事物进行抽象，接口是对动作、行为抽象
+
+匿名内部类
+
+```
+public class Application {
+    public static void main(String[] args) {
+        Human chinese = new Human() {
+            @Override
+            public void eat() {
+                System.out.println("中国人吃中国菜");
+            }
+        };
+        chinese.eat();
+    }
+}
+```
+
+### 多态
+
+```
+HuaHu huahu = new HuaMuLan();
+```
+
+父类 new 子类 --> 向上转型
+
+向下转型 -->
+
+```
+HuaMuLan huaMuLan = (HuaMuLan) HuaHu;
+```
+
+
+
+### other
+
+object 是所有类的父类
+
+ToString 其实就是重写 object 的 ToString 方法
+
+面向对象 --> 封装、继承、多态
+
+---
 

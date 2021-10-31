@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+        }
+        .one{
+            background-color: aqua;
+            transform: rotateX(45deg);
+        }
+        .two{
+            background-color: blue;
+            transform: rotateY(45deg);
+        }
+        .three{
+            background-color: brown;
+            transition: 3s;
+            /* transform: rotateZ(90deg); */
+        }
+        .three:hover{
+            transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 主要练习 transform -->
+    <div class="box one">rotateX</div>
+    <div class="box two">rotateY</div>
+    <div class="box three">rotateZ</div>
+</body>
+</html>
