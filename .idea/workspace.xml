@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="af5dbc70-4374-467d-9b25-92bcbb0285fd" name="更改" comment="8.10修改" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1wOjFotIIzakCFby7WA2AgNzW36" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kong _Java" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="应用程序级" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="af5dbc70-4374-467d-9b25-92bcbb0285fd" name="更改" comment="" />
+      <created>1628336427392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628336427392</updated>
+      <workItem from="1628336428856" duration="4311000" />
+      <workItem from="1628370498984" duration="9114000" />
+      <workItem from="1628396772798" duration="3614000" />
+      <workItem from="1628408065742" duration="2005000" />
+      <workItem from="1628410727790" duration="3899000" />
+      <workItem from="1628423386627" duration="158000" />
+      <workItem from="1628423562341" duration="368000" />
+      <workItem from="1628423948129" duration="1173000" />
+      <workItem from="1628426584969" duration="779000" />
+      <workItem from="1628427384422" duration="655000" />
+      <workItem from="1628467250395" duration="203000" />
+      <workItem from="1628596172475" duration="1307000" />
+      <workItem from="1631667777130" duration="148000" />
+      <workItem from="1632035296983" duration="13000" />
+      <workItem from="1632587566836" duration="158000" />
+      <workItem from="1632875412263" duration="4000" />
+      <workItem from="1632891745827" duration="659000" />
+      <workItem from="1632911303710" duration="17000" />
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1628407912245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628407912245</updated>
+    </task>
+    <task id="LOCAL-00002" summary="8.10修改">
+      <created>1628596478413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628596478413</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="8.10修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="8.10修改" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="164" key="FileChooserDialogImpl" timestamp="1632911318490">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="164" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1632911318490" />
+    <state x="425" y="185" key="run.anything.popup" timestamp="1632587610741">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1632587610741" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
