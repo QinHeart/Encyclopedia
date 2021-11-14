@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+	<div id="box">
+		全选：<input type="checkbox"/>
+		<hr >
+		<input type="checkbox" name="" id="" value="" />第一项<br>
+		<input type="checkbox" name="" id="" value="" />第二项<br>
+		<input type="checkbox" name="" id="" value="" />第三项<br>
+		<input type="checkbox" name="" id="" value="" />第四项
+	</div>
+	<script type="text/javascript">
+		var allBtn = document.querySelector('input');
+		var items = document.querySelectorAll('input:nth-child(n+2)');
+		
+		allBtn.onclick = function(){
+			var type = allBtn.checked;
+			console.log(type);
+			for (var k = 0;k<items.length;k++){
+				items[k].checked = type;
+			}
+		}
+		
+		for (var i = 0;i<items.length;i++){
+			items[i].onclick = function(){
+				var outcome = true;
+				for (var j = 0;j<items.length;j++){
+					if (items[j].checked == false){
+						outcome = false;
+					}
+				}
+				console.log(outcome);
+				allBtn.checked = outcome;
+			}
+		}
+		
+	</script>
+</body>
+</html>
