@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#box {
+				width: 100px;
+				border: 3px dashed black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="checkbox" name="" id="checkAll" />全选<br />
+			<input type="checkbox" name="" id="checkTabs" />选项一<br />
+			<input type="checkbox" name="" id="checkTabs" />选项二<br />
+			<input type="checkbox" name="" id="checkTabs" />选项三<br />
+			<input type="checkbox" name="" id="checkTabs" />选项四
+		</div>
+
+		<script>
+			var btnAll = document.querySelector("#checkAll");
+			var btnTabs = document.querySelectorAll("#checkTabs");
+			btnAll.onclick = function () {
+				for (var i = 0; i < btnTabs.length; i++) {
+					btnTabs[i].checked = this.checked;
+				}
+			};
+			for (var i = 0; i < btnTabs.length; i++) {
+				btnTabs[i].onclick = function () {
+					var btnChecked = true;
+					for (var i = 0; i < btnTabs.length; i++) {
+						if (!btnTabs[i].checked) {
+							btnChecked = false;
+						}
+					}
+					btnAll.checked = btnChecked;
+				};
+			}
+		</script>
+	</body>
+</html>

@@ -63,5 +63,12 @@ onmousedown/onmousesetup 按下/弹起
 5. lis[i].style.backgroundPosition = '0 - '+ index + 'px';
 6. 分层选取元素 -->  var imgs = document.querySelector('.box').querySelectorAll('image');
 
+### 自定义元素属性
+1. 获取元素值
+element.属性 获取属性值
+element.getAttribute('属性')
+2. 修改元素值
+element.setAttribute('属性','值')
+element.removeAttribute('属性')
 
 ## BOM

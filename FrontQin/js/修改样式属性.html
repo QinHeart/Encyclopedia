@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#text {
+				width: 100px;
+				height: 30px;
+				border: 3px dashed black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: gray;
+			}
+			button {
+				width: 106px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test"></div>
+		<div id="text">默认样式</div>
+		<button>修改样式</button>
+
+		<script>
+			var getClass = document.querySelector("div");
+			var btn = document.querySelector("button");
+			var txt = document.querySelector("#text");
+			btn.onclick = function () {
+				getClass.setAttribute("class", "change");
+				txt.innerHTML = getClass.getAttribute("class");
+			};
+		</script>
+	</body>
+</html>
