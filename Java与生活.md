@@ -80,7 +80,7 @@ int y = (int) Math.round(x);
 
 ```
 x < y ? ture : false
-       int z = x<y?x:y;
+int z = x<y?x:y;
 ```
 
 ### 字符串
@@ -348,6 +348,7 @@ alt + insert --> overwrite method
 *   遗产没人继承，也无法继承
 
 ```
+final class 类名(){}
 public final class Dog extends Animal
 ```
 
@@ -418,10 +419,9 @@ public class Chinese implements Human {
 // 花木兰替父从军，向上转型
 public class Army {
     public static void main(String[] args) {
+    
         HuaHu huaHu = new HuaMuLan();
-
         System.out.println(huaHu);
-        
         HuaMuLan.fighting();
     }
 }

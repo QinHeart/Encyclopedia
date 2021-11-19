@@ -58,8 +58,10 @@ onmousedown/onmousesetup 按下/弹起
 1. innerText、innerHTML 不识别/识别 HTML标签（优先）
 2. src、href、id、alt、title
 3. type、value、checked、seleccted、disabled(true/false)
-
-
+4. element.style(行内样式) | element.className(类名样式操作) --> this.className = 'first second';
+	- this.style.backgroundColor = 'purple'; --> 驼峰命名法
+5. lis[i].style.backgroundPosition = '0 - '+ index + 'px';
+6. 分层选取元素 -->  var imgs = document.querySelector('.box').querySelectorAll('image');
 
 
 ## BOM
