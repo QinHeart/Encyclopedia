@@ -152,7 +152,7 @@ eventTarget.onclick = function(){
 - type:事件类型字符串，如click,mouseover,加引号
 - listener:事件处理函数，类似于function
 - useCarture:可选函数，是boolean类型，默认false
-#### 元素解绑
+#### 元素解绑(删除事件)
 - divs[0].onclick = null; 传统
 
 - 考虑到后续需要解绑事件，可以以函数方式添加注册事件
@@ -334,3 +334,28 @@ this指向调用者
 - location.assign() 跳转页面(重定向)，记录历史
 - location.replace() 替换当前页面，不记录历史
 - lication.reload() 刷新，参数为true,则强制刷新
+
+6. nagivator
+- userAgent 用户浏览器信息
+
+7. history 对象
+- back() 后退
+- forward() 前进
+- go(参数) 参数为1，前进一个页面，参数为-1，后退一个页面
+
+#### offset 元素偏移量
+返回值不带单位
+- element.offsetParent 返回带定位的父元素
+- element.offsetTop | Left
+- element.offsetWidth | Height 返回自身包括padding、边框、内容区宽高
+> 获取元素值，用offest,改变元素值，用style
+
+#### 鼠标移动坐标
+
+1. 鼠标在页面中的坐标 e.pageX | e.pageY
+2. 盒子在页面中的坐标 box.offsetLeft | box.offsetTop
+3. 鼠标移动 mousemove
+
+#### 拖拽弹窗
+
+- mousedown | mousemove
